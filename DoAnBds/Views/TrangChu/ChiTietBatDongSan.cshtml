@@ -1,0 +1,84 @@
+﻿@{
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="~/css/style2.css" rel="stylesheet" />
+}
+<table align="center" width="80%">
+    @foreach (var batdongsan in ViewBag.batdongsans)
+    {
+    <tr>
+        <td><h1 align="center" style="color:#003849;"><span> @batdongsan.TenBds</span></h1></td>
+    </tr>
+    }
+</table>
+@*<div style="display:flex; width:95%;" align="center">
+    @foreach (var batdongsan in ViewBag.batdongsans)
+    {
+        <div style="display:flex;">
+            <div align="center">
+                <a> <img src="~/images/@batdongsan.HinhAnh" width="500" height="500" /></a>
+            </div>
+            <div align="center" style="float:right">
+                <a><h2 style="font-size:20px;"><b>@batdongsan.TenBds</b></h2></a>
+                <p style="color:black;">&nbsp;&nbsp;@batdongsan.MoTa</p>
+            </div>
+            
+        </div>
+       
+    }
+</div>*@
+<div align="center" width="80%">
+    @foreach (var batdongsan in ViewBag.batdongsans)
+    {
+        <table align="center">
+        <tr>
+            <td>
+                    <a><img src="~/images/@batdongsan.HinhAnh" width="1000" height="600" /></a>
+            </td>
+        </tr>
+    </table>
+    <br />
+        <table align="center" width="60%">
+        <tr>
+                <td><p style="font-size:20px;">@batdongsan.MoTa1</p></td>
+        </tr>
+    </table>
+        <br />
+        <table align="center" >
+            <tr>
+                <td><img src="~/images/@batdongsan.HinhAnh1" width="1000" height="600" /></td>
+            </tr>
+        </table>
+        <br />
+        <table align="center" width="60%">
+            <tr>
+                <td><p style="font-size:20px;">@batdongsan.MoTa2</p></td>
+            </tr>
+        </table>
+        <br />
+        <table align="center">
+            <tr>
+                <td><img src="~/images/@batdongsan.HinhAnh2" width="1000" height="600" /></td>
+            </tr>
+        </table>
+        <br />
+        <table align="center" width="60%">
+            <tr>
+                <td><p style="font-size:20px;">@batdongsan.MoTa3</p></td>
+            </tr>
+        </table>
+        <br />
+        <table align="center">
+            <tr>
+                <td><img src="~/images/@batdongsan.HinhAnh3" width="1000" height="600" /></td>
+            </tr>
+        </table>
+    }
+</div>

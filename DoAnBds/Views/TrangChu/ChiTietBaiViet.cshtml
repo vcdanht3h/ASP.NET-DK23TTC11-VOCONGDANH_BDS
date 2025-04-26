@@ -1,0 +1,70 @@
+﻿@{
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    Layout = "~/Views/Shared/_Layout.cshtml";
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+}
+<style>
+    .hidden-img {
+        display: none;
+    }
+</style>
+<div>
+    @foreach (var baiviet in ViewBag.baiviet1s)
+    {
+    <table align="center" width="80%">
+    <tr>
+        <td><h1 align="center" style="color:#003849;"><span>@baiviet.TenBv</span></h1></td>
+    </tr>
+    </table>
+     <div align="center">
+            <img src="~/images/@baiviet.AnhBV1" width="1000" height="600" onerror="hideImage(this)">
+    </div>
+        <table align="center" width="80%">
+            <tr>
+
+                <td><p style="font-size:18px;"><br>@baiviet.NoiDungBV2</p></td>
+            </tr>
+        </table>
+        <div align="center">
+            <img src="~/images/@baiviet.AnhBV2" width="1000" height="600" onerror="hideImage(this)">
+        </div>
+        <table align="center" width="80%">
+            <tr>
+
+                <td><p style="font-size:18px;"><br>@baiviet.NoiDungBV3</p></td>
+            </tr>
+        </table>
+        <div align="center">
+            <img src="~/images/@baiviet.AnhBV3" width="1000" height="900" onerror="hideImage(this)">
+        </div>
+        <table align="center" width="80%">
+            <tr>
+
+                <td><p style="font-size:18px;"><br>@baiviet.NoiDungBV4</p></td>
+            </tr>
+        </table>
+        <div align="center">
+            <img src="~/images/@baiviet.AnhBV4" width="1000" height="600" onerror="hideImage(this)">
+        </div>
+        <table align="center" width="80%">
+            <tr>
+
+                <td><p style="font-size:18px;"><br>@baiviet.NoiDungBV5</p></td>
+            </tr>
+        </table>
+    }
+
+</div>
+<script>
+    // Hàm JavaScript để ẩn khung khi hình ảnh không tải thành công
+    function hideImage(imgElement) {
+        imgElement.classList.add('hidden-img');
+    }
+</script>

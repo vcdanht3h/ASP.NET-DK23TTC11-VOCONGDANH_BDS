@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+	<link href="~/css/stylelogin.css" rel="stylesheet" />
+}
+@model DoAnBds.Models.PhanQuyen
+@*<br />*@
+
+@*<table align="left" style="margin:0% 1%;">
+    <tr>
+        <td><a asp-controller="trangchu" asp-action="index"><img src="~/images/arrow.png" width="24" height="24" /></a></td>
+    </tr>
+</table>*@
+<br />
+<br />
+<br />
+<br /> 
+
+<form class="kkk" align="center" method="post" asp-area="admin" asp-controller="login" asp-action="index">
+    <h1>Log in</h1>
+    <div class="inset">
+        <p>
+            <label for="username">USERNAME</label>
+            <input type="text" name="username" id="username">
+            <span asp-validation-for="Username"></span>
+        </p>
+        <p>
+            <label for="password">PASSWORD</label>
+            <input type="password" name="password" id="password">
+            <span asp-validation-for="Password"></span>
+        </p>
+    <p class="p-container">
+        <input type="submit" name="go" id="go" value="Log in">
+    </p>
+      </div>
+</form>

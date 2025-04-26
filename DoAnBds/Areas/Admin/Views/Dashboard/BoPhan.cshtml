@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<h1 align="center" style="color:#003849;"><span>Danh sách bộ phận</span></h1>
+<table border="1" align="center" width="100%">
+    <tr align="center">
+        <th>Mã bộ phận</th>
+        <th>Tên bộ phận</th>
+    </tr>
+
+    @foreach (var bds in ViewBag.bophans)
+    {
+        <tr align="center">
+            <td>@bds.MaBp</td>
+            <td>@bds.TenBp</td>
+            <td><a asp-action="removebophan" asp-controller="dashboard" asp-area="admin" asp-route-id="@bds.MaBp" onclick="return confirm('Bạn có muốn xóa?')">Xóa</a>|<a asp-action="editbophan" asp-controller="dashboard" asp-area="admin" asp-route-id="@bds.MaBp">Sửa</a></td>
+        </tr>
+    }
+
+</table>

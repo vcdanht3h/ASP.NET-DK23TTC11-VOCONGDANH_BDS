@@ -1,0 +1,51 @@
+﻿@{
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="~/css/stylelogin.css" rel="stylesheet" />
+}
+@model DoAnBds.Models.NhaThau
+<br />
+<table align="left" style="margin:0% 1%;">
+    <tr>
+        <td><a asp-controller="dashboard" asp-action="nhathau" asp-area="admin"><img src="~/images/arrow.png" width="24" height="24" /></a></td>
+    </tr>
+</table>
+<br />
+<br />
+<br />
+<br />
+
+<form class="kkk" align="center" method="post" asp-area="admin" asp-controller="dashboard" asp-action="addnhathau">
+    <h1 align="center" style="color:#003849;"><span>THÊM NHÀ THẦU</span></h1>
+    <div class="inset">
+        <p>
+            <label for="MaNt">Mã nhà thầu</label>
+            <input type="text" name="MaNt" id="MaNt" asp-for="MaNt">
+        </p>
+        <p>
+            <label for="TenNt">Tên nhà thầu</label>
+            <input type="text" name="TenNt" id="TenNt" asp-for="TenNt">
+        </p>
+        <p>
+            <label for="DiaChi">Địa chỉ</label>
+            <input type="text" name="DiaChi" id="DiaChi" asp-for="DiaChi">
+        </p>
+        <p>
+            <label for="Gmail">Gmail</label>
+            <input type="text" name="Gmail" id="Gmail" asp-for="Gmail">
+        </p>
+        <p>
+            <label for="SoDienThoai">SoDienThoai</label>
+            <input type="text" name="SoDienThoai" id="SoDienThoai" asp-for="SoDienThoai">
+        </p>
+        <p>
+            <label for="maform">Mã form</label>
+            <input type="text" name="maform" id="maform" asp-for="MaForm">
+        </p>
+
+    </div>
+    <p class="p-container">
+        <input type="submit" name="go" id="go" value="Xác nhận">
+    </p>
+</form>

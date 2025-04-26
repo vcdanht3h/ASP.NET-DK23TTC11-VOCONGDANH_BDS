@@ -1,0 +1,78 @@
+﻿@{
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="~/css/stylelogin.css" rel="stylesheet" />
+}
+@model DoAnBds.Models.BatDongSan
+<br />
+<table align="left" style="margin:0% 1%;">
+    <tr>
+        <td><a asp-controller="dashboard" asp-action="batdongsan" asp-area="admin"><img src="~/images/arrow.png" width="24" height="24" /></a></td>
+    </tr>
+</table>
+<br />
+<br />
+<br />
+<br />
+
+<form class="kkk" align="center" method="post" asp-area="admin" asp-controller="dashboard" asp-action="editbatdongsan" enctype="multipart/form-data">
+    <h1 align="center" style="color:#003849;"><span>CHỈNH SỬA BẤT ĐỘNG SẢN</span></h1>
+    <div class="inset">
+        <p>
+            <label for="mabds">Mã bất động sản</label>
+            <input type="text" name="mabds" id="mabds" asp-for="MaBds">
+        </p>
+        <p>
+            <label for="giabds">Gía bất động sản</label>
+            <input type="text" name="giabds" id="giabds" asp-for="GiaBds">
+        </p>
+        <p>
+            <label for="tenbds">Tên bất động sản</label>
+            <input type="text" name="tenbds" id="tenbds" asp-for="TenBds">
+        </p>
+        <p>
+            <label for="diachi">Địa chỉ</label>
+            <input type="text" name="diachi" id="diachi" asp-for="DiaChi">
+        </p>
+        <p>
+            <label for="madm">Mã danh mục</label>
+            <input type="text" name="madm" id="madm" asp-for="MaDm">
+        </p>
+        <p>
+            <label for="file">Hình ảnh</label>
+            <input type="file" name="file" asp-for="HinhAnh" />
+        </p>
+        <p>
+            <label for="file1">Hình ảnh 1 </label>
+            <input type="file" name="file1" asp-for="HinhAnh1" />
+        </p>
+        <p>
+            <label for="file2">Hình ảnh 2 </label>
+            <input type="file" name="file2" asp-for="HinhAnh2" />
+        </p>
+        <p>
+            <label for="file3">Hình ảnh 3 </label>
+            <input type="file" name="file3" asp-for="HinhAnh3" />
+        </p>
+        <p>
+            <label for="mota">Mô tả</label>
+            <input type="text" name="mota" id="mota" asp-for="MoTa">
+        </p>
+        <p>
+            <label for="mota1">Mô tả 1</label>
+            <input type="text" name="mota1" id="mota11" asp-for="MoTa1">
+        </p>
+        <p>
+            <label for="mota2">Mô tả 2</label>
+            <input type="text" name="mota2" id="mota2" asp-for="MoTa2">
+        </p>
+        <p>
+            <label for="mota3">Mô tả 3</label>
+            <input type="text" name="mota3" id="mota3" asp-for="MoTa3">
+        </p>
+    </div>
+    <p class="p-container">
+        <input type="submit" name="go" id="go" value="Xác nhận">
+    </p>
+</form>

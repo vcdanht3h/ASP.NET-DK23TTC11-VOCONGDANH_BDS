@@ -1,0 +1,34 @@
+﻿@{
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="~/css/stylelogin.css" rel="stylesheet" />
+}
+@model DoAnBds.Models.BoPhan
+<br />
+<table align="left" style="margin:0% 1%;">
+    <tr>
+        <td><a asp-controller="dashboard" asp-action="bophan" asp-area="admin"><img src="~/images/arrow.png" width="24" height="24" /></a></td>
+    </tr>
+</table>
+<br />
+<br />
+<br />
+<br />
+
+<form class="kkk" align="center" method="post" asp-area="admin" asp-controller="dashboard" asp-action="addbophan" enctype="multipart/form-data">
+    <h1 align="center" style="color:#003849;"><span>THÊM BỘ PHẬN</span></h1>
+    <div class="inset">
+        <p>
+            <label for="MaBp">Mã bộ phận</label>
+            <input type="text" name="MaBp" id="MaBp" asp-for="MaBp">
+        </p>
+        <p>
+            <label for="TenBp">Tên bộ phận</label>
+            <input type="text" name="TenBp" id="TenBp" asp-for="TenBp">
+        </p>
+    </div>
+    <p class="p-container">
+        <input type="submit" name="go" id="go" value="Xác nhận">
+    </p>
+</form>

@@ -1,0 +1,47 @@
+﻿@{
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="~/css/stylelogin.css" rel="stylesheet" />
+}
+@model DoAnBds.Models.KhachHang
+<br />
+<table align="left" style="margin:0% 1%;">
+    <tr>
+        <td><a asp-controller="dashboard" asp-action="khachhang" asp-area="admin"><img src="~/images/arrow.png" width="24" height="24" /></a></td>
+    </tr>
+</table>
+<br />
+<br />
+<br />
+<br />
+
+<form class="kkk" align="center" method="post" asp-area="admin" asp-controller="dashboard" asp-action="addkhachhang">
+    <h1 align="center" style="color:#003849;"><span>THÊM KHÁCH HÀNG</span></h1>
+    <div class="inset">
+        <p>
+            <label for="makh">Mã khách hàng</label>
+            <input type="text" name="makh" id="makh" asp-for="MaKh">
+        </p>
+        <p>
+            <label for="tenkh">Tên khách hàng</label>
+            <input type="text" name="tenkh" id="tenkh" asp-for="TenKh">
+        </p>
+        <p>
+            <label for="diachi">Địa chỉ</label>
+            <input type="text" name="diachi" id="diachi" asp-for="DiaChi">
+        </p>
+        <p>
+            <label for="sodienthoai">Số điện thoại</label>
+            <input type="text" name="sodienthoai" id="sodienthoai" asp-for="SoDienThoai">
+        </p>
+        <p>
+            <label for="maform">Mã form</label>
+            <input type="text" name="maform" id="maform" asp-for="MaForm">
+        </p>
+      
+    </div>
+    <p class="p-container">
+        <input type="submit" name="go" id="go" value="Xác nhận">
+    </p>
+</form>

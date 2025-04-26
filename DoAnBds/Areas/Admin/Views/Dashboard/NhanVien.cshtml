@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<h1 align="center" style="color:#003849;"><span>Danh sách nhân viên</span></h1>
+<table border="1" align="center" width="100%">
+    <tr align="center">
+        <th>Mã nhân viên</th>
+        <th>Tên nhân viên</th>
+        <th>Giới tính</th>
+        <th>Mã quyền</th>
+        <th>Ca làm việc</th>
+        <th>Mã bộ phận</th>
+        <th>Trạng thái</th>
+    </tr>
+    @foreach (var bds in ViewBag.nhanviens)
+    {
+        <tr align="center">
+            <td>@bds.MaNv</td>
+            <td>@bds.TenNv</td>
+            <td>@bds.GioiTinh</td>
+            <td>@bds.MaQuyen</td>
+            <td>@bds.CaLamViec</td>
+            <td>@bds.MaBp</td>
+            <td><a asp-action="removenhanvien" asp-controller="dashboard" asp-area="admin" asp-route-id="@bds.MaNv" onclick="return confirm('Bạn có muốn xóa?')">Xóa</a>|<a asp-action="editnhanvien" asp-controller="dashboard" asp-area="admin" asp-route-id="@bds.MaNv">Sửa</a></td>
+        </tr>
+    }
+</table>

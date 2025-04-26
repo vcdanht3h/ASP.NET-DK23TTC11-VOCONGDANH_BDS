@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<h1 align="center" style="color:#003849;"><span>Danh sách bất động sản</span></h1>
+<table border="1" align="center" width="100%">
+    <tr align="center">
+        <th>Mã bất động sản</th>
+        <th>Giá bất động sản</th>
+        <th>Tên bất động sản</th>
+        <th>Địa chỉ</th>
+        <th>Mã Danh mục</th>
+        <th>Hình ảnh</th>
+        <th>Mô tả chung bất động sản</th>
+        <th>Trạng thái</th>
+    </tr>
+
+        @foreach (var bds in ViewBag.batdongsans)
+        {
+        <tr align="center">
+            <td>@bds.MaBds</td>
+            <td>@bds.GiaBds</td>
+            <td>@bds.TenBds</td>
+            <td>@bds.DiaChi</td>
+            <td>@bds.MaDm</td>
+            <td><img src="~/images/@bds.HinhAnh" width="200" height="200" /></td>
+            <td>@bds.MoTa</td>
+            <td><a asp-action="removebatdongsan" asp-route-id="@bds.MaBds" asp-controller="dashboard" asp-area="admin" onclick="return confirm('Bạn có muốn xóa?')">Xóa</a>|<a asp-action="editbatdongsan" asp-controller="dashboard" asp-area="admin" asp-route-id="@bds.MaBds">Sửa</a></td>
+          </tr>
+        }
+   
+</table>

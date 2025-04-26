@@ -1,0 +1,13 @@
+﻿
+.row1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.name {
+    flex: 1 0 130px
+}
+
+
+

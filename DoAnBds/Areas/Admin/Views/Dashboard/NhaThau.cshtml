@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<h1 align="center" style="color:#003849;"><span>Danh sách nhà thầu</span></h1>
+<table border="1" align="center" width="100%">
+    <tr align="center">
+        <th>Mã nhà thầu</th>
+        <th>Tên nhà thầu</th>
+        <th>Địa chỉ</th>
+        <th>Gmail</th>
+        <th>Số điện thoại</th>
+        <th>Mã Form</th>
+        <th>Trạng thái</th>
+    </tr>
+    @foreach (var bds in ViewBag.nhathaus)
+    {
+        <tr align="center">
+            <td>@bds.MaNt</td>
+            <td>@bds.TenNt</td>
+            <td>@bds.DiaChi</td>
+            <td>@bds.Gmail</td>
+            <td>@bds.SoDienThoai</td>
+            <td>@bds.MaForm</td>
+            <td><a asp-route-id="@bds.MaNt" asp-action="removenhathau" asp-controller="dashboard" asp-area="admin" onclick="return confirm('Bạn có muốn xóa?')">Xóa</a>|<a asp-route-id="@bds.MaNt" asp-action="editnhathau" asp-controller="dashboard" asp-area="admin">Sửa</a></td>
+        </tr>
+    }
+
+</table>

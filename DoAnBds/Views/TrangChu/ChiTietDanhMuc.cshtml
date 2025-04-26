@@ -1,0 +1,43 @@
+﻿@{
+    <br />
+     <br />
+    <br />
+    <br />
+    <br />
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="~/css/style2.css" rel="stylesheet" />
+}
+<table align="left" style="margin:0% 1%;">
+    <tr>
+        <td><a asp-controller="trangchu" asp-action="index"><img src="~/images/arrow.png" width="24" height="24" /></a></td>
+    </tr>
+</table>
+<table align="center" width="80%">
+    <tr>
+        <td><h1 align="center" style="color:#003849;"><span>DANH SÁCH BẤT ĐỘNG SẢN </span></h1></td>
+    </tr>
+
+</table>
+<div style="display:flex; width:95%; position:relative; left:90px;" align="center" class="row">
+    @foreach (var batdongsan in ViewBag.batdongsans)
+    {
+        <div class="col-lg-4 col-md-5 col-sm-7" align="center">
+            <div align="center">
+                <a asp-controller="trangchu" asp-action="ChiTietBatDongSan" asp-route-id="@batdongsan.MaBds"> <img src="~/images/@batdongsan.HinhAnh" width="280" height="300" /></a>
+            </div>
+
+            <div align="center">
+                <a asp-controller="trangchu" asp-action="ChiTietBatDongSan" asp-route-id="@batdongsan.MaBds"><p style="font-size:20px;"><b>@batdongsan.TenBds</b></p></a>
+            </div>
+            <div>
+                <p class="margin-des" align="center" style="font-size:20px;">&nbsp;&nbsp;Giá:@batdongsan.GiaBds tỷ</p>
+             </div>
+            <div align="center">
+                <p style="color:black;">&nbsp;&nbsp;@batdongsan.MoTa</p>
+            </div>
+        </div>
+    }
+</div>
