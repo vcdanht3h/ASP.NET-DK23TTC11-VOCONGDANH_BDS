@@ -23,6 +23,6 @@ Website này cung cấp các tính năng như:
 - **Ngôn ngữ lập trình**: C#
 - **Framework**: ASP.NET MVC
 - **Cơ sở dữ liệu**: SQL Server
-- ## Cài Đặt
-## Kết nối Cơ Sở Dữ Liệu và truy cập:
+## Cài Đặt
+Kết nối Cơ Sở Dữ Liệu và truy cập:
 http://https://localhost:5144 trong trình duyệt
