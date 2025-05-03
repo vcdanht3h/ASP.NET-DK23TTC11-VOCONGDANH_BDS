@@ -1,4 +1,4 @@
-# ASPNET-dk23ttc11-VoCongDanh-BatDongSan
+# ASPNET-DK23TTC11-VoCongDanh-BatDongSan
 # MSSV: 170123523
 # Chuyên đề ASP.Net
 # Xây dựng website bán Bất động sản
