@@ -1,7 +1,7 @@
 # ASPNET-DK23TTC11-VoCongDanh-BatDongSan
 # MSSV: 170123523
 # Chuyên đề ASP.Net
-# Xây dựng website bán Bất động sản
+# Xây dựng Website Bán Bất động sản
 Dự án này là một website bán dự án Bất Động Sản. 
 Website sử dụng ASP.NET MVC kết hợp với Entity Framework để phát triển các tính năng giới thiệu sản phẩm trực tuyến, bao gồm quản lý sản phẩm, Quản lý Khách hàng, .
 ## Mô Tả
