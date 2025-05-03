@@ -9,7 +9,7 @@ Website này cung cấp các tính năng như:
 - **Quản lý sản phẩm**: Thêm, sửa, xóa sản phẩm từ bảng sản phẩm.
 - **Quản lý đơn hàng**: Xem, quản lý và cập nhật trạng thái đơn hàng.
 - **Quản lý danh mục**: Xem, quản lý các nhà thầu.
-- **Quản lý khách hàng**: Đăng ký, đăng nhập, và quản lý tài khoản người dùng.
+- **Quản lý khách hàng**: Đăng ký, đăng nhập, và quản lý tài khoản khách hàng.
 ## Các Tính Năng Chính
 - **Giao diện người dùng**:
   - Trang chủ giới thiệu dự án bât động sản
