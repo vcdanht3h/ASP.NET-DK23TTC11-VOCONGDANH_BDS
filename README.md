@@ -25,4 +25,4 @@ Website này cung cấp các tính năng như:
 - **Cơ sở dữ liệu**: SQL Server
 ## Cài Đặt
 Kết nối Cơ Sở Dữ Liệu và truy cập:
-http://https://localhost:5144 trong trình duyệt
+https://localhost:5144 trong trình duyệt
